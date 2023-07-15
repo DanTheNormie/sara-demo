@@ -1,0 +1,142 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+}
+
+section{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.slider{
+    overflow: hidden;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    width: 100vw;
+}
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-100px * 5))}
+}
+
+
+.image-row1{
+    animation: scroll 20s linear infinite reverse;
+	display: flex;
+	width: calc(250px * 10);
+}
+.image-row2{
+    animation: scroll 20s linear infinite;
+	display: flex;
+	width: calc(250px * 10);
+}
+.image-row3{
+    animation: scroll 20s linear infinite reverse;
+	display: flex;
+	width: calc(250px * 10);
+}
+.image-row4{
+    animation: scroll 20s linear infinite;
+	display: flex;
+	width: calc(250px * 10);
+}
+
+.imgs{
+    width: 250px;
+    height: 200px;
+    background-color: beige;
+    margin: 15px;
+    border-radius: 10px;
+}
+.imgs:nth-of-type(3),
+.imgs:nth-of-type(8){
+    background-color: aquamarine;
+    width: 150px;
+}
+.imgs:nth-of-type(1),
+.imgs:nth-of-type(6){
+    width: 280px;
+    background-color: lavender;
+}
+.imgs:nth-of-type(2),
+.imgs:nth-of-type(7){
+    width: 200px;
+}
+.imgs:nth-of-type(4),
+.imgs:nth-of-type(9){
+    background-color: honeydew;
+    width: 150px;
+}
+
+
+
+
+.main-heading{
+    z-index: 1;
+    position: absolute;
+    top: 20%;
+    --spacing:2rem;
+    margin-left:var(--spacing);
+    letter-spacing: var(--spacing);
+    font-size: 12rem;
+    font-family: 'Cinzel Decorative',cursive;
+    font-weight: 700;
+}
+
+.sub-heading{
+    z-index: 1;
+    position: absolute;
+    top: 45%;
+    --spacing:1.1rem;
+    font-size: 2rem;
+    margin-left: var(--spacing);
+    letter-spacing: var(--spacing);
+}
+
+.tagline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: absolute;
+    bottom:30%;
+    font-size: 4rem;
+  }
+  .tagline p {
+    font-size: 3rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    overflow: hidden;
+  }
+  .tagline p span.typed-text {
+    font-weight: normal;
+    color: #dd7732;
+  }
+  .tagline p span.cursor {
+    display: inline-block;
+    background-color: #ccc;
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+  }
+  .tagline p span.cursor.typing {
+    animation: none;
+  }
+  @keyframes blink {
+    0%  { background-color: #ccc; }
+    49% { background-color: #ccc; }
+    50% { background-color: transparent; }
+    99% { background-color: transparent; }
+    100%  { background-color: #ccc; }
+  }
